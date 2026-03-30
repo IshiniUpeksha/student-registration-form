@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 03</title>
+    <style>
+        .header{
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .form_div{
+            border: 1px solid black;
+            padding: 20px;
+            width: 500px;
+            margin: 0 auto;
+            background-color: rgb(214, 225, 251);
+            border-radius: 20px;
+        }
+
+        label, .agreemeentMessage, #submit_btn{
+            font-weight: bold;
+        }
+
+        label{
+            margin-right: 10px;
+        }
+
+        input{
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .input{
+            width: 450px;
+        }
+
+        .input2{
+            width: 300px;
+        }
+
+        .male{
+            margin-left: 40px;
+        }
+
+        .female{
+            margin-left: 150px;
+        }
+
+        #agree{
+            margin-left: 30px;
+        }
+
+        .error{
+            color: red;
+        }
+
+        #submit_btn{
+            width: 100px;
+        }
+
+        #success_message{
+            color: green;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">Student Registration Form</h1>
+
+    <div class="form_div">
+        <form id="form">
+            <!-- Full Name -->
+            <label for="fName">Full Name</label>&nbsp;<br>
+            <input type="text" id="fName" name="fName" class="input">
+            <p id="fName_error" class="error"></p>
+
+            <!-- Email Address -->
+            <label for="email">Email Address</label>&nbsp;<br>
+            <input type="email" id="email" name="email" class="input">
+            <p id="email_error" class="error"></p>
+
+            <!-- Password -->
+            <label for="password">Password</label>&nbsp;<br>
+            <input type="password" id="password" name="password" class="input2">
+            <p id="password_error" class="error"></p>
+
+            <!-- Confirm Password -->
+            <label for="conPassword">Confirm Password</label>&nbsp;<br>
+            <input type="password" id="conPassword" name="conPassword" class="input2">
+            <p id="cPassword_error" class="error"></p>
+
+            <!-- NIC -->
+            <label for="nic">NIC</label>&nbsp;<br>
+            <input type="text" id="nic" name="nic" class="input2">
+            <p id="nic_error" class="error"></p>
+
+            <!-- Phone Number -->
+            <label for="pNumber">Phone Number</label>&nbsp;<br>
+            <input type="number" id="pNumber" name="pNumber" class="input2">
+            <p id="pNumber_error" class="error"></p>
+            
+            <!-- Date of Birth -->
+            <label for="birthday">Date of Birth</label>&nbsp;<br>
+            <input type="date" id="birthday" name="birthday" class="input2">
+            <p id="birthday_error" class="error"></p>
+
+            <!-- Gender -->
+            <label for="gender">Gender</label>&nbsp;<br>
+            <input type="radio" name="gender" value="male" class="male">Male
+            <input type="radio" name="gender" value="female" class="female">Female
+            <p id="gender_error" class="error"></p>
+
+            <!-- Agreement -->
+            <p class="agreementMessage">I hereby confirm that the information provided is accurate and I agree to the university’s registration policies.</p>
+            <input type="checkbox" id="agree" name="agreement" value="agree">Agree&nbsp;
+            <p id="agreement_error" class="error"></p>
+
+            <input type="submit" name="submit" id="submit_btn" value="Register">
+        </form>
+
+        <p id="success_message" class="success"></p>
+    </div>
+
+    <script src="jquery-4.0.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
